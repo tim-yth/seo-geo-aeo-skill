@@ -1,0 +1,4 @@
+# old URLs
+/guides/old-grinder/ /guides/grinders/ 301
+/guides/percolator/ /guides/gone/ 301
+/* /index.html 200

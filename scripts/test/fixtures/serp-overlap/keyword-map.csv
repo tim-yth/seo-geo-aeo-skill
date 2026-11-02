@@ -1,0 +1,5 @@
+keyword,intent,cluster,target_url,current_url_ranking,position,impressions,clicks,status,notes
+pour over ratio,informational,pour over ratio,https://www.example.com/guides/pour-over/,,6.2,900,30,tracked,
+pour over coffee ratio,informational,pour over ratio,/blog/pour-over-coffee/,,7.1,400,10,tracked,
+pour over kettle,informational,pour over ratio,/guides/pour-over/,,12,200,5,tracked,
+best pour over kettle,consideration,best pour over kettle,/blog/kettles/,,14,150,2,tracked,

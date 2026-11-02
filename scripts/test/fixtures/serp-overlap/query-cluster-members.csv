@@ -1,0 +1,7 @@
+query,cluster_id,cluster,clicks,impressions,ctr,position,tier,bucket,intent,brand,risk
+pour over ratio,1,pour over ratio,30,900,0.0333,6.20,head,4-10,informational,,none
+pour over coffee ratio,1,pour over ratio,10,400,0.0250,7.10,head,4-10,informational,,none
+coffee to water ratio,2,coffee to water ratio,8,300,0.0267,8.00,body,4-10,informational,,none
+pour over kettle,1,pour over ratio,5,200,0.0250,12.00,body,11-20,informational,,none
+best pour over kettle,3,best pour over kettle,2,150,0.0133,14.00,tail,11-20,consideration,,none
+gooseneck kettle,4,gooseneck kettle,1,100,0.0100,18.00,tail,11-20,informational,,none

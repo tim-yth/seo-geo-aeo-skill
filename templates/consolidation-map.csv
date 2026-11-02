@@ -1,0 +1,6 @@
+source_url,action,target_url,cluster_id,cluster_name,role,wave,grade,x_flags,imp_28d,clk_28d,pos_28d,top_queries,content_to_move,needs_main_fix,reason,status,d0_date
+https://example.com/blog/card-x-meaning,keep,,K01,X 牌牌義,main,,B,,1896,27,5.5,"X 牌正位(337/0/7.7); X 牌 正位(120/2/7.5)",,false,"主文：群內 GSC 最強（1896 曝光／27 點擊）且品質 B；收轉址前先補入被轉頁的範例與 FAQ",main_fixed,
+https://example.com/blog/card-x-meaning-mistakes,301,https://example.com/blog/card-x-meaning,K01,X 牌牌義,member,3,D,,361,10,5.8,"X 牌正位感情(14/0/5.5); X 牌(9/1/9.3)","兩個三張牌範例；「X 牌 vs Y 牌」「每日牌」兩題 FAQ",false,"同意圖後綴變體；曝光 ≥200 → 第 3 波：段落與 FAQ 已在主文找得到、前 5 個查詢詞已涵蓋",moved,
+https://example.com/blog/card-x-meaning-guide,301,https://example.com/blog/card-x-meaning,K01,X 牌牌義,member,1,D,,14,0,11.2,"X 牌意思(6/0/10.8)",,false,"同意圖後綴變體；曝光 ≤20、點擊 ≤2、不用搬內容 → 第 1 波；正式站 curl 通過",verified,2026-10-12
+https://example.com/blog/work-question-reading,keep-rewrite,,K02,工作占卜,main,0,D,,615,60,6.1,"工作占卜(210/22/5.4); 工作 塔羅(96/9/6.3)",,true,"（裁決）兩批審稿意見衝突：一批要把本頁（D）轉走，一批要它接收轉址。本頁是這組字唯一在排名的網址，依決策規則 2 第 4 條保留網址，用 B 級頁的內容原地重寫",planned,
+https://example.com/blog/work-question-spread,301,https://example.com/blog/work-question-reading,K02,工作占卜,member,2,B,,42,1,14.6,"工作牌陣(18/1/12.9)","完整的三張牌示範；「換工作前要問什麼」FAQ",true,"（裁決）內容較好但沒有排名，依決策規則 2 第 4 條反過來 301 到排名網址；段落搬進主文、主文重寫完（main_fixed）才轉",planned,

@@ -1,0 +1,13 @@
+{
+  "id": "msg_fixture_b",
+  "type": "message",
+  "role": "assistant",
+  "model": "test-claude-served",
+  "stop_reason": "end_turn",
+  "content": [
+    { "type": "server_tool_use", "id": "srvtoolu_2", "name": "web_search", "input": { "query": "手沖咖啡 教學 網站" } },
+    { "type": "web_search_tool_result", "tool_use_id": "srvtoolu_2", "content": { "type": "web_search_tool_result_error", "error_code": "too_many_requests" } },
+    { "type": "text", "text": "I could not search the web right now." }
+  ],
+  "usage": { "input_tokens": 100, "output_tokens": 20, "server_tool_use": { "web_search_requests": 0 } }
+}

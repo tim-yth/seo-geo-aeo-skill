@@ -1,0 +1,9 @@
+keyword,intent,cluster,target_url,current_url_ranking,position,impressions,clicks,status,notes,synonyms
+coffee ratio calculator,commercial,ratio,https://www.example.com/tools/ratio-calculator/,,,,,tracked,,ratio calculator|brew ratio calculator
+french press ratio,informational,ratio,/tools/ratio-calculator/,,,,,tracked,,
+pour over,informational,pour over,/guides/pour-over/,,,,,tracked,,pour-over coffee;手沖咖啡
+french press,informational,french press,/old-french-press,,,,,tracked,,
+burr grinder,consideration,grinders,/blog/best-grinders/,,,,,tracked,,coffee grinder
+coffee storage,informational,storage,/blog/coffee-storage/,,,,,tracked,,
+coffee tag,informational,x,/blog/tag/coffee/,,,,,tracked,,lab
+no target yet,informational,,,,,,,new,,

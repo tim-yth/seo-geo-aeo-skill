@@ -1,0 +1,4 @@
+timestamp,client_ip,method,path,status,user_agent,host
+2026-10-20T08:00:00Z,192.0.2.130,GET,/guides/pour-over/,200,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Safari/605.1.15 (Applebot/0.1; +http://www.apple.com/go/applebot)",www.example.com
+2026-10-20T09:00:00Z,192.0.2.193,GET,/blog/best-grinders/,200,CCBot/2.0 (https://commoncrawl.org/faq/),www.example.com
+2026-10-20T10:00:00Z,203.0.113.13,GET,/,200,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",www.example.com

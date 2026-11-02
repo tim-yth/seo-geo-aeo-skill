@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "keyword": "best pour over kettle",
+    "provider": "brave",
+    "country": "US",
+    "lang": "en",
+    "top": 10,
+    "fetchedAt": "2026-11-01T08:00:00.000Z"
+  },
+  "results": [
+    {
+      "rank": 1,
+      "url": "https://kettles.example/best/",
+      "domain": "kettles.example",
+      "title": "Result 1",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 2,
+      "url": "https://competitor-a.com/kettles",
+      "domain": "competitor-a.com",
+      "title": "Result 2",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 3,
+      "url": "https://shop.example/kettle-1",
+      "domain": "shop.example",
+      "title": "Result 3",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 4,
+      "url": "https://reviews.example/kettles",
+      "domain": "reviews.example",
+      "title": "Result 4",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 5,
+      "url": "https://w1.example/1",
+      "domain": "w1.example",
+      "title": "Result 5",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 6,
+      "url": "https://w2.example/2",
+      "domain": "w2.example",
+      "title": "Result 6",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 7,
+      "url": "https://w3.example/3",
+      "domain": "w3.example",
+      "title": "Result 7",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 8,
+      "url": "https://w4.example/4",
+      "domain": "w4.example",
+      "title": "Result 8",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 9,
+      "url": "https://w5.example/5",
+      "domain": "w5.example",
+      "title": "Result 9",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 10,
+      "url": "https://w6.example/6",
+      "domain": "w6.example",
+      "title": "Result 10",
+      "description": "",
+      "age": ""
+    }
+  ],
+  "ours": {
+    "rank": null,
+    "urls": []
+  },
+  "features": {}
+}

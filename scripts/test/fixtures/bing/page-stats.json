@@ -1,0 +1,4 @@
+{"d":[
+  {"__type":"QueryStats:#Microsoft.Bing.Webmaster.Api","AvgClickPosition":2,"AvgImpressionPosition":2.5,"Clicks":20,"Date":"{{DATE:2026-10-11}}","Impressions":300,"Query":"https://www.example.com/guides/pour-over/"},
+  {"__type":"QueryStats:#Microsoft.Bing.Webmaster.Api","AvgClickPosition":-1,"AvgImpressionPosition":7,"Clicks":1,"Date":"{{DATE:2026-10-11}}","Impressions":60,"Query":"https://www.example.com/blog/cold-brew/"}
+]}

@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "keyword": "gooseneck kettle",
+    "provider": "brave",
+    "country": "US",
+    "lang": "en",
+    "top": 10,
+    "fetchedAt": "2026-11-01T08:00:00.000Z"
+  },
+  "results": [
+    {
+      "rank": 1,
+      "url": "https://rival.com/kettles",
+      "domain": "rival.com",
+      "title": "Result 1",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 2,
+      "url": "https://shop.example/kettle-2",
+      "domain": "shop.example",
+      "title": "Result 2",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 3,
+      "url": "https://g1.example/1",
+      "domain": "g1.example",
+      "title": "Result 3",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 4,
+      "url": "https://g2.example/2",
+      "domain": "g2.example",
+      "title": "Result 4",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 5,
+      "url": "https://g3.example/3",
+      "domain": "g3.example",
+      "title": "Result 5",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 6,
+      "url": "https://g4.example/4",
+      "domain": "g4.example",
+      "title": "Result 6",
+      "description": "",
+      "age": ""
+    }
+  ],
+  "ours": {
+    "rank": null,
+    "urls": []
+  },
+  "features": {}
+}

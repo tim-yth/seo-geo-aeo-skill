@@ -1,0 +1,12 @@
+# Old URL list (union of sitemap, crawl and logs in a real migration)
+https://www.example.com/
+https://www.example.com/guides/pour-over.html
+https://www.example.com/Guides/French-Press/
+https://www.example.com/blog/index.html
+https://www.example.com/blog/2019/best-burr-grinders
+https://www.example.com/blog/cold-brew-ratio-guide
+https://www.example.com/blog/descaling-kettle
+https://old-domain.example.org/contact/
+https://www.example.com/tools/brew-calculator?utm_source=newsletter
+https://www.example.com/blog/zh/手沖咖啡入門
+https://www.example.com/welcome-old

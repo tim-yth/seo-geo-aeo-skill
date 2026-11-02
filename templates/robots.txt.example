@@ -1,0 +1,89 @@
+# robots.txt 範例（把 example.com 與內部路徑換成你的）
+#
+# 政策：搜尋引擎與 AI 爬蟲全部開放，只擋內部路徑。
+# 規則一：爬蟲只遵守「最具體」的那一群（RFC 9309）。只要某個爬蟲有自己的群組，
+#         User-agent: * 底下的規則就對它無效，所以每一群都要帶完整的 Disallow。
+#         連續多行 User-agent 屬於同一群，共用下面的規則。
+# 規則二：不要擋渲染需要的 JS／CSS。
+# 規則三：測試、預覽主機不要靠 robots.txt 擋（擋的是抓取，網址仍可能被收錄），
+#         改用 X-Robots-Tag: noindex 標頭或密碼保護。
+# 規則四：noindex 與 Disallow 同一路徑只選一種。下面的 Disallow 路徑，前提是它們從沒被收錄過；
+#         已經被收錄的路徑（例如結帳、帳戶頁），先拿掉這裡的 Disallow、回 noindex，
+#         等 GSC 顯示已排除後，才視需要加回 Disallow。兩個同時用，Google 抓不到頁面就看不到 noindex。
+# 規則五：這是公開檔。不要列內部資料夾名稱（版本庫、部署工具、備份、停用的程式），
+#         那等於公開一份清單；這類路徑改由伺服器回 404＋noindex。
+# 規則六：部署後檢查的是正式站「最終」的 robots.txt。CDN 的 AI 爬蟲設定可能改寫或附加規則；
+#         例如 Cloudflare 的 Training 類別選「Block」也會擋到 Googlebot、Bingbot、Applebot，
+#         只想拒絕訓練要選「Disallow AI Training」（2026-11-02 查證）。改這類設定要記 D0。
+
+# ── 預設 ──────────────────────────────────────────
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /account/
+Disallow: /checkout/
+
+# ── 搜尋引擎 ────────────────────────────────────────
+User-agent: Googlebot
+User-agent: GoogleOther
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+User-agent: YandexBot
+User-agent: Baiduspider
+Allow: /
+Disallow: /api/
+Disallow: /account/
+Disallow: /checkout/
+
+# ── AI 檢索與使用者觸發（回答問題時即時抓頁、附引用）──────
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: DuckAssistBot
+User-agent: MistralAI-User
+User-agent: Meta-ExternalFetcher
+Allow: /
+Disallow: /api/
+Disallow: /account/
+Disallow: /checkout/
+
+# ── AI 訓練與控制 token ─────────────────────────────
+# Google-Extended 控制 Gemini 的訓練，以及 Gemini Apps 用你的內容做 grounding 的資格；
+# 不影響 Google 搜尋的收錄與排名，也管不到 AI Overviews／AI Mode。
+# 想被 AI 引用就開放；如果內容本身是付費商品，可以改成下方「選項 B」。
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Meta-ExternalAgent
+User-agent: Amazonbot
+User-agent: cohere-ai
+Allow: /
+Disallow: /api/
+Disallow: /account/
+Disallow: /checkout/
+
+# ── 選項 B（只在你決定不讓內容被拿去訓練時使用；用它取代上面「AI 訓練」那一群）──
+# Google-Extended 同時管 Gemini 的訓練與 Gemini Apps 的 grounding 資格：放進這一群，兩者會一起失去（不影響 Google 搜尋）。
+# User-agent: GPTBot
+# User-agent: ClaudeBot
+# User-agent: Google-Extended
+# User-agent: Applebot-Extended
+# User-agent: CCBot
+# User-agent: Meta-ExternalAgent
+# User-agent: cohere-ai
+# Disallow: /
+#
+# 共用訓練標記（預告，2026-11-02 查證）：Google 預計 2027 年（爬蟲文件寫 2027 年初）、
+# Microsoft 2027-02-01 起支援以 IETF 草案定義的 User-agent: __usage_ai-training 群組。
+# 生效前上面的具名群組照寫；生效後要用時，把下面兩行加進選項 B，並記 D0。
+# 注意：只用它拒絕訓練、沒有另外寫 Google-Extended 時，Google 會當作你也拒絕了 Google-Extended。
+# User-agent: __usage_ai-training
+# Disallow: /
+
+Sitemap: https://example.com/sitemap.xml

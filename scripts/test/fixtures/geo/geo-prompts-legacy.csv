@@ -1,0 +1,4 @@
+run_date,engine,locale,intent,prompt,mentioned,rank,cited_url,reason,accuracy,pricing_claim,competitors,action_needed,notes
+2026-10-01,chatgpt,en,recommendation,What are the best pour over coffee guides?,yes,2,https://www.example.com/guides/pour-over/,clear ratios,correct,n/a,Rival Brew,,manual row kept
+2026-10-01,perplexity,zh-TW,推薦,推薦手沖咖啡教學網站,no,,,,,,Rival Brew,,"manual, with comma"
+YYYY-MM-DD,chatgpt,en,category,What are good free {category} websites?,,,,,,,,,template row

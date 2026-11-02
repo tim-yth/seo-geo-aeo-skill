@@ -1,0 +1,18 @@
+url,final_url,status,redirects,in_sitemap,depth,indexable,canonical,canonical_status,title
+https://www.example.com/,https://www.example.com/,200,0,yes,0,yes,https://www.example.com/,self,/
+https://www.example.com/guides/,https://www.example.com/guides/,200,0,yes,,yes,https://www.example.com/guides/,self,/guides/
+https://www.example.com/guides/pour-over/,https://www.example.com/guides/pour-over/,200,0,yes,,yes,https://www.example.com/guides/pour-over/,self,/guides/pour-over/
+https://www.example.com/guides/french-press/,https://www.example.com/guides/french-press/,200,0,yes,,yes,https://www.example.com/guides/french-press/,self,/guides/french-press/
+https://www.example.com/tools/ratio-calculator/,https://www.example.com/tools/ratio-calculator/,200,0,yes,,yes,https://www.example.com/tools/ratio-calculator/,self,/tools/ratio-calculator/
+https://www.example.com/blog/,https://www.example.com/blog/,200,0,yes,,yes,https://www.example.com/blog/,self,/blog/
+https://www.example.com/blog/best-grinders/,https://www.example.com/blog/best-grinders/,200,0,yes,,yes,https://www.example.com/blog/best-grinders/,self,/blog/best-grinders/
+https://www.example.com/blog/coffee-storage/,https://www.example.com/blog/coffee-storage/,200,0,yes,,yes,https://www.example.com/blog/coffee-storage/,self,/blog/coffee-storage/
+https://www.example.com/blog/tag/coffee/,https://www.example.com/blog/tag/coffee/,200,0,,,no,https://www.example.com/blog/tag/coffee/,self,/blog/tag/coffee/
+https://www.example.com/about/,https://www.example.com/about/,200,0,yes,,yes,https://www.example.com/about/,self,/about/
+https://www.example.com/orphan-page/,https://www.example.com/orphan-page/,200,0,yes,,yes,https://www.example.com/orphan-page/,self,/orphan-page/
+https://www.example.com/guides/deep-1/,https://www.example.com/guides/deep-1/,200,0,yes,,yes,https://www.example.com/guides/deep-1/,self,/guides/deep-1/
+https://www.example.com/guides/deep-2/,https://www.example.com/guides/deep-2/,200,0,yes,,yes,https://www.example.com/guides/deep-2/,self,/guides/deep-2/
+https://www.example.com/guides/deep-3/,https://www.example.com/guides/deep-3/,200,0,yes,,yes,https://www.example.com/guides/deep-3/,self,/guides/deep-3/
+https://www.example.com/guides/deep-4/,https://www.example.com/guides/deep-4/,200,0,yes,,yes,https://www.example.com/guides/deep-4/,self,/guides/deep-4/
+https://www.example.com/old-french-press,https://www.example.com/guides/french-press/,301,1,,,no,,,
+https://www.example.com/login/,https://www.example.com/login/,200,0,,,no,,,Sign in

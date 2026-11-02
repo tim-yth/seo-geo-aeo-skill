@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>{{ORIGIN}}/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>{{ORIGIN}}/guides/pour-over/</loc><lastmod>2026-10-02</lastmod><image:image><image:loc>{{ORIGIN}}/img/a.png</image:loc></image:image></url>
+  <url><loc>{{ORIGIN}}/blog/best-grinders/</loc></url>
+  <url><loc>{{ORIGIN}}/blog/old-post</loc></url>
+  <url><loc>{{ORIGIN}}/blog/noindex-page/</loc></url>
+  <url><loc>{{ORIGIN}}/private/secret/</loc></url>
+  <url><loc>{{ORIGIN}}/orphan/</loc></url>
+  <url><loc>{{ORIGIN}}/blog/missing/</loc></url>
+  <url><loc>{{ORIGIN}}/en/guides/pour-over/</loc></url>
+  <url><loc>{{ORIGIN}}/app/</loc></url>
+</urlset>

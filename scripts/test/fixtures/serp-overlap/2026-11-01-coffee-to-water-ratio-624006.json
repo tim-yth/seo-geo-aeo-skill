@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "keyword": "coffee to water ratio",
+    "provider": "brave",
+    "country": "US",
+    "lang": "en",
+    "top": 10,
+    "fetchedAt": "2026-11-01T08:00:00.000Z"
+  },
+  "results": [
+    {
+      "rank": 1,
+      "url": "https://example.org/brew/pour-over",
+      "domain": "example.org",
+      "title": "Result 1",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 2,
+      "url": "https://rival.com/calculator",
+      "domain": "rival.com",
+      "title": "Result 2",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 3,
+      "url": "https://example.net/coffee/water-ratio",
+      "domain": "example.net",
+      "title": "Result 3",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 4,
+      "url": "https://y1.example/1",
+      "domain": "y1.example",
+      "title": "Result 4",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 5,
+      "url": "https://y2.example/2",
+      "domain": "y2.example",
+      "title": "Result 5",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 6,
+      "url": "https://y3.example/3",
+      "domain": "y3.example",
+      "title": "Result 6",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 7,
+      "url": "https://y4.example/4",
+      "domain": "y4.example",
+      "title": "Result 7",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 8,
+      "url": "https://y5.example/5",
+      "domain": "y5.example",
+      "title": "Result 8",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 9,
+      "url": "https://y6.example/6",
+      "domain": "y6.example",
+      "title": "Result 9",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 10,
+      "url": "https://y7.example/7",
+      "domain": "y7.example",
+      "title": "Result 10",
+      "description": "",
+      "age": ""
+    }
+  ],
+  "ours": {
+    "rank": null,
+    "urls": []
+  },
+  "features": {}
+}

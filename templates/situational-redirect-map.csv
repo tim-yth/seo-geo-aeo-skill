@@ -1,0 +1,9 @@
+old_url,new_url,type,expected_status,reason,found_in,has_backlinks,impr_16m,clk_16m,owner,tested_at,observed_status,observed_hops,observed_final_url,notes,match_method,confidence
+https://old-brand.com.tw/products/hydra-serum,https://brand.tw/product/hydra-serum/,1:1,301,同一商品，網址規則改變,sitemap|gsc|links,yes,12840,311,web,,,,,外部連結多：上線後 D+1 先驗這一條,slug,4
+https://old-brand.com.tw/collections/serum,https://brand.tw/product-category/serum/,1:1,301,同一分類,sitemap|gsc,no,5320,96,web,,,,,,slug,4
+https://old-brand.com.tw/blogs/news/serum-tips-2019,https://brand.tw/guide/serum-routine/,consolidate,301,舊文併入新指南；有用段落已搬進新頁,gsc,yes,880,12,content,,,,,轉址前先確認新頁已涵蓋舊頁在接的查詢,manual,人工確認
+https://old-brand.com.tw/products/clay-mask-2020,,retire-410,410,停產且沒有後繼型號；不轉首頁,logs,no,40,0,web,,,,,同步從 feed、sitemap、內鏈移除,manual,人工確認
+https://old-brand.com.tw/pages/campaign-2021,,retire-404,404,過期活動、無外部連結、無曝光,crawl,no,0,0,web,,,,,,manual,人工確認
+https://old-brand.com.tw/collections/serum?sort=price,https://brand.tw/product-category/serum/,1:1,301,舊參數網址曾被索引，收斂到分類頁,logs|gsc,no,210,1,web,,,,,參數網址只處理曾有曝光或外鏈的,normalized-path,3
+http://old-brand.com.tw/products/hydra-serum,https://brand.tw/product/hydra-serum/,1:1,301,http 舊網址：先一跳到同主機的 https（HSTS 要求），再一跳到新網域,links,yes,,,web,,,,,唯一允許的兩跳：第一跳同主機 http→https；observed_hops 應為 2，第二跳之後不得再轉,slug,4
+https://brand.tw/product/hydra-serum/index.html,https://brand.tw/product/hydra-serum/,normalize,301,新站內的網址正規化（index.html、尾斜線、大小寫），不是退役,crawl,no,,,web,,,,,目的地頁仍要留在 sitemap、列表與 llms 清單；產生器排除轉址來源時不能把它算成下架,normalized-path,4

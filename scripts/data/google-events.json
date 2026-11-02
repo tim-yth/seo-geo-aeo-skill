@@ -1,0 +1,731 @@
+{
+  "_comment": "Google Search ranking updates and incidents (Search Status Dashboard), Search Console data anomalies and reporting changes, 2024-2026. Dates are Pacific Time calendar days (the Search Console day). Every verified entry links to an official Google page; third-party observations are in \"unverified\" and are only shown as notes. Refresh with: node scripts/search-events.mjs refresh (adds newer dashboard incidents to the workspace). Add site-specific events with: node scripts/log-change.mjs add --type external-event --title \"...\" --date YYYY-MM-DD [--until YYYY-MM-DD].",
+  "version": 1,
+  "lastVerified": "2026-11-02",
+  "sources": {
+    "statusDashboard": "https://status.search.google.com/summary",
+    "statusIncidentsJson": "https://status.search.google.com/incidents.json",
+    "gscDataAnomalies": "https://support.google.com/webmasters/answer/6211453",
+    "searchCentralUpdates": "https://developers.google.com/search/updates"
+  },
+  "bufferDaysAfterEnd": {
+    "core": 7,
+    "spam": 3,
+    "discover": 7,
+    "ranking-other": 1,
+    "indexing": 1,
+    "serving": 0,
+    "serp-feature": 0,
+    "gsc-anomaly": 0,
+    "measurement": 0,
+    "site": 0
+  },
+  "events": [
+    {
+      "id": "gsd-XhUDXP7A67iHCD2kmbVu",
+      "kind": "spam",
+      "title": "September 2026 spam update",
+      "start": "2026-09-24",
+      "end": "2026-10-08",
+      "startTime": "2026-09-24T16:15:00Z",
+      "endTime": "2026-10-08T08:00:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-LEubPCm2octf2uMqCFKE",
+      "kind": "spam",
+      "title": "August 2026 spam update",
+      "start": "2026-08-18",
+      "end": "2026-08-21",
+      "startTime": "2026-08-18T16:27:00Z",
+      "endTime": "2026-08-21T08:49:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-YUX1peHev5a4fkxLDiUQ",
+      "kind": "spam",
+      "title": "June 2026 spam update",
+      "start": "2026-06-24",
+      "end": "2026-06-26",
+      "startTime": "2026-06-24T16:00:00Z",
+      "endTime": "2026-06-26T17:00:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-wdAXJk6LRRihEjpzEeWE",
+      "kind": "core",
+      "title": "May 2026 core update",
+      "start": "2026-05-21",
+      "end": "2026-06-02",
+      "startTime": "2026-05-21T15:40:00Z",
+      "endTime": "2026-06-02T12:40:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-7eTbAa2jWdToLkraZj5y",
+      "kind": "core",
+      "title": "March 2026 core update",
+      "start": "2026-03-27",
+      "end": "2026-04-08",
+      "startTime": "2026-03-27T09:00:00Z",
+      "endTime": "2026-04-08T13:00:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-VbnSXAH4SmEcxPtx4YSD",
+      "kind": "spam",
+      "title": "March 2026 spam update",
+      "start": "2026-03-24",
+      "end": "2026-03-25",
+      "startTime": "2026-03-24T19:00:00Z",
+      "endTime": "2026-03-25T14:30:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-TZF4pLmbzFdoBPP6o3iv",
+      "kind": "serving",
+      "title": "Serving incident: Serving was experiencing an issue",
+      "start": "2026-02-24",
+      "end": "2026-02-24",
+      "startTime": "2026-02-25T03:55:00Z",
+      "endTime": "2026-02-25T04:10:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/TZF4pLmbzFdoBPP6o3iv",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-mYbNTqV1ytDc2fA8hUz4",
+      "kind": "discover",
+      "title": "February 2026 Discover update",
+      "start": "2026-02-05",
+      "end": "2026-02-27",
+      "startTime": "2026-02-05T17:00:00Z",
+      "endTime": "2026-02-27T10:00:00Z",
+      "scope": "discover",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-DsirqJ1gpPRgVQeccPRv",
+      "kind": "core",
+      "title": "December 2025 core update",
+      "start": "2025-12-11",
+      "end": "2025-12-29",
+      "startTime": "2025-12-11T17:25:00Z",
+      "endTime": "2025-12-29T19:00:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-pW6WN7Ymo49q7z8pKk9w",
+      "kind": "serving",
+      "title": "Serving incident: Serving is experiencing an ongoing issue",
+      "start": "2025-10-03",
+      "end": "2025-10-06",
+      "startTime": "2025-10-03T20:00:00Z",
+      "endTime": "2025-10-06T20:40:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/pW6WN7Ymo49q7z8pKk9w",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-a7Aainy6E9rZsmfq82xt",
+      "kind": "spam",
+      "title": "August 2025 spam update",
+      "start": "2025-08-26",
+      "end": "2025-09-22",
+      "startTime": "2025-08-26T16:00:00Z",
+      "endTime": "2025-09-22T07:00:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-riq1AuqETW46NfBCe5NT",
+      "kind": "core",
+      "title": "June 2025 core update",
+      "start": "2025-06-30",
+      "end": "2025-07-17",
+      "startTime": "2025-06-30T14:30:00Z",
+      "endTime": "2025-07-17T08:00:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/riq1AuqETW46NfBCe5NT",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-rX6zGEp9vJJxxrY16g4A",
+      "kind": "indexing",
+      "title": "Indexing incident: Google Search is experiencing an indexing issue",
+      "start": "2025-06-12",
+      "end": "2025-06-12",
+      "startTime": "2025-06-12T23:54:00Z",
+      "endTime": "2025-06-13T05:15:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/rX6zGEp9vJJxxrY16g4A",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-wNcefVMLpVGGoFLzgMEg",
+      "kind": "serving",
+      "title": "Serving incident: There's an ongoing issue with serving Google Lens, Discover, and Voice Search",
+      "start": "2025-06-12",
+      "end": "2025-06-12",
+      "startTime": "2025-06-12T18:00:00Z",
+      "endTime": "2025-06-12T20:30:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/wNcefVMLpVGGoFLzgMEg",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-zpmwuSwifjDjfrVdaZUx",
+      "kind": "core",
+      "title": "March 2025 core update",
+      "start": "2025-03-13",
+      "end": "2025-03-27",
+      "startTime": "2025-03-13T16:00:00Z",
+      "endTime": "2025-03-27T12:35:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/zpmwuSwifjDjfrVdaZUx",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-UUq2WSouY7PhSm8zvtD1",
+      "kind": "spam",
+      "title": "December 2024 spam update",
+      "start": "2024-12-19",
+      "end": "2024-12-26",
+      "startTime": "2024-12-19T17:00:00Z",
+      "endTime": "2024-12-26T19:00:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/UUq2WSouY7PhSm8zvtD1",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-V9nDKuo6nWKh2ThBALgA",
+      "kind": "core",
+      "title": "December 2024 core update",
+      "start": "2024-12-12",
+      "end": "2024-12-18",
+      "startTime": "2024-12-12T15:30:00Z",
+      "endTime": "2024-12-18T19:00:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/V9nDKuo6nWKh2ThBALgA",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-kdTQ3CitewEHCy5vuhTD",
+      "kind": "serving",
+      "title": "Serving incident: Google Lens is experiencing a serving issue",
+      "start": "2024-12-12",
+      "end": "2024-12-13",
+      "startTime": "2024-12-12T13:38:00Z",
+      "endTime": "2024-12-13T13:53:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/kdTQ3CitewEHCy5vuhTD",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-iGN9Cz8C64gm57ZXwxze",
+      "kind": "indexing",
+      "title": "Indexing incident: Google Search is experiencing an indexing issue",
+      "start": "2024-12-09",
+      "end": "2024-12-09",
+      "startTime": "2024-12-09T21:30:00Z",
+      "endTime": "2024-12-10T00:30:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/iGN9Cz8C64gm57ZXwxze",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-G7rp11wqTaTGn6JjiPF3",
+      "kind": "core",
+      "title": "November 2024 core update",
+      "start": "2024-11-11",
+      "end": "2024-12-05",
+      "startTime": "2024-11-11T19:00:00Z",
+      "endTime": "2024-12-05T08:00:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/G7rp11wqTaTGn6JjiPF3",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-8FqjYCvePmrsF9P5assw",
+      "kind": "serving",
+      "title": "Serving incident: Serving is experiencing an ongoing issue",
+      "start": "2024-09-14",
+      "end": "2024-09-15",
+      "startTime": "2024-09-15T05:22:00Z",
+      "endTime": "2024-09-15T08:09:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/8FqjYCvePmrsF9P5assw",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-42XCLGtpuCZkzqe4dc6S",
+      "kind": "ranking-other",
+      "title": "Ranking incident: Ranking is experiencing an ongoing issue",
+      "start": "2024-08-15",
+      "end": "2024-08-20",
+      "startTime": "2024-08-16T00:15:00Z",
+      "endTime": "2024-08-20T11:30:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/42XCLGtpuCZkzqe4dc6S",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-gVx6b2o78zke7GrMidGy",
+      "kind": "core",
+      "title": "August 2024 core update",
+      "start": "2024-08-15",
+      "end": "2024-09-03",
+      "startTime": "2024-08-15T14:58:00Z",
+      "endTime": "2024-09-03T19:00:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/gVx6b2o78zke7GrMidGy",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-mFyYTxqTvS3Gp9fD3JP2",
+      "kind": "indexing",
+      "title": "Indexing incident: Fresh content indexing issue",
+      "start": "2024-07-08",
+      "end": "2024-07-08",
+      "startTime": "2024-07-08T21:32:00Z",
+      "endTime": "2024-07-08T23:21:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/mFyYTxqTvS3Gp9fD3JP2",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-QdUeCQx3LRVbzQ3E7FiD",
+      "kind": "spam",
+      "title": "June 2024 spam update",
+      "start": "2024-06-20",
+      "end": "2024-06-27",
+      "startTime": "2024-06-20T15:12:00Z",
+      "endTime": "2024-06-27T16:11:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/QdUeCQx3LRVbzQ3E7FiD",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-Gjz5TP3aaDRmKsSWgWF4",
+      "kind": "indexing",
+      "title": "Indexing incident: Google Search is experiencing an indexing issue",
+      "start": "2024-06-20",
+      "end": "2024-06-20",
+      "startTime": "2024-06-20T18:00:00Z",
+      "endTime": "2024-06-21T04:03:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/Gjz5TP3aaDRmKsSWgWF4",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-6xK73KdB1GVcQc2kRtEm",
+      "kind": "serving",
+      "title": "Serving incident: There's an ongoing issue with serving some features in Google Search",
+      "start": "2024-05-30",
+      "end": "2024-05-31",
+      "startTime": "2024-05-31T02:36:00Z",
+      "endTime": "2024-05-31T15:27:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/6xK73KdB1GVcQc2kRtEm",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-iXz2PJfodvyjaVUeqxZE",
+      "kind": "spam",
+      "title": "March 2024 spam update",
+      "start": "2024-03-05",
+      "end": "2024-03-20",
+      "startTime": "2024-03-05T17:03:00Z",
+      "endTime": "2024-03-20T14:09:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/iXz2PJfodvyjaVUeqxZE",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-1jW2F89qC2NxJBWGiKxE",
+      "kind": "core",
+      "title": "March 2024 core update",
+      "start": "2024-03-05",
+      "end": "2024-04-19",
+      "startTime": "2024-03-05T17:02:00Z",
+      "endTime": "2024-04-19T17:00:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/1jW2F89qC2NxJBWGiKxE",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-Jh8ty34prbHLqSRiWKqm",
+      "kind": "indexing",
+      "title": "Indexing incident: We're investigating an issue with indexing in Google Search",
+      "start": "2024-01-31",
+      "end": "2024-02-08",
+      "startTime": "2024-01-31T23:16:00Z",
+      "endTime": "2024-02-08T11:36:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/Jh8ty34prbHLqSRiWKqm",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    },
+    {
+      "id": "gsd-hySMmncEDZ7Xpaf9i32C",
+      "kind": "serving",
+      "title": "Serving incident: There's an ongoing issue with the Google homepage for Firefox users on Android devices",
+      "start": "2024-01-08",
+      "end": "2024-01-09",
+      "startTime": "2024-01-08T15:33:00Z",
+      "endTime": "2024-01-09T15:37:00Z",
+      "scope": "search",
+      "url": "https://status.search.google.com/incidents/hySMmncEDZ7Xpaf9i32C",
+      "source": "Google Search Status Dashboard",
+      "verified": true
+    }
+  ],
+  "gscAnomalies": [
+    {
+      "id": "gsc-2026-08-13-genai-search",
+      "title": "Generative AI performance report (Search): impressions under-reported (later restored)",
+      "start": "2026-08-13",
+      "end": "2026-08-17",
+      "pattern": "period",
+      "affects": [
+        "impressions"
+      ],
+      "scope": "genai-search",
+      "backfilled": "yes (2026-08-21)",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "verified": true
+    },
+    {
+      "id": "gsc-2026-08-13-discover",
+      "title": "Discover (and Generative AI in Discover): clicks and impressions under-reported",
+      "start": "2026-08-13",
+      "end": "2026-08-13",
+      "pattern": "period",
+      "affects": [
+        "clicks",
+        "impressions"
+      ],
+      "scope": "discover",
+      "backfilled": "no",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "verified": true
+    },
+    {
+      "id": "gsc-2026-06-24-discover",
+      "title": "Discover (and Generative AI in Discover): clicks and impressions under-reported",
+      "start": "2026-06-24",
+      "end": "2026-06-24",
+      "pattern": "period",
+      "affects": [
+        "clicks",
+        "impressions"
+      ],
+      "scope": "discover",
+      "backfilled": "no",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "verified": true
+    },
+    {
+      "id": "gsc-2026-05-21-discover",
+      "title": "Discover: clicks and impressions under-reported",
+      "start": "2026-05-21",
+      "end": "2026-05-21",
+      "pattern": "period",
+      "affects": [
+        "clicks",
+        "impressions"
+      ],
+      "scope": "discover",
+      "backfilled": "no",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "verified": true
+    },
+    {
+      "id": "gsc-2026-05-07-discover",
+      "title": "Discover: clicks and impressions under-reported",
+      "start": "2026-05-07",
+      "end": "2026-05-08",
+      "pattern": "period",
+      "affects": [
+        "clicks",
+        "impressions"
+      ],
+      "scope": "discover",
+      "backfilled": "no",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "verified": true
+    },
+    {
+      "id": "gsc-2026-04-16-job-listing",
+      "title": "\"Job listing\" and \"Job details\" search appearances not reported",
+      "start": "2026-04-16",
+      "end": "2026-04-27",
+      "pattern": "period",
+      "affects": [
+        "clicks",
+        "impressions"
+      ],
+      "scope": "search-appearance:job",
+      "backfilled": "no",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "verified": true
+    },
+    {
+      "id": "gsc-2025-05-13-impressions-logging",
+      "title": "Impressions logging error: impressions over-reported, so CTR and average position are distorted; clicks were not affected",
+      "start": "2025-05-13",
+      "end": "2026-04-27",
+      "pattern": "period",
+      "affects": [
+        "impressions",
+        "ctr",
+        "position"
+      ],
+      "scope": "search",
+      "backfilled": "not stated",
+      "announced": "2026-04-03",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "verified": true,
+      "note": "Google: \"you may notice a decrease in impressions\" after the fix. Comparisons that touch this period can only use clicks."
+    },
+    {
+      "id": "gsc-2026-02-28-bulk-export",
+      "title": "BigQuery bulk data export missing for some properties (not recovered)",
+      "start": "2026-02-28",
+      "end": "2026-03-01",
+      "pattern": "period",
+      "affects": [
+        "clicks",
+        "impressions",
+        "ctr",
+        "position"
+      ],
+      "scope": "bulk-export",
+      "backfilled": "no",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "verified": true,
+      "note": "API and UI data are not affected; only bulk-export tables."
+    },
+    {
+      "id": "gsc-2024-08-13-product-snippets",
+      "title": "Product snippet search appearance over-reported",
+      "start": "2024-08-13",
+      "end": "2024-09-20",
+      "pattern": "period",
+      "affects": [
+        "clicks",
+        "impressions"
+      ],
+      "scope": "search-appearance:product",
+      "backfilled": "no",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "archive": "https://web.archive.org/web/20250808122410/https://support.google.com/webmasters/answer/6211453?hl=en",
+      "verified": true
+    },
+    {
+      "id": "gsc-2024-05-15-product-snippets",
+      "title": "Product snippet search appearance over-reported",
+      "start": "2024-05-15",
+      "end": "2024-05-27",
+      "pattern": "period",
+      "affects": [
+        "clicks",
+        "impressions"
+      ],
+      "scope": "search-appearance:product",
+      "backfilled": "no",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "archive": "https://web.archive.org/web/20250116113326/https://support.google.com/webmasters/answer/6211453?hl=en",
+      "verified": true
+    },
+    {
+      "id": "gsc-2024-03-28-amp-webstories-images",
+      "title": "AMP pages and Web Stories in Google Images not reported",
+      "start": "2024-03-28",
+      "end": "2024-04-02",
+      "pattern": "period",
+      "affects": [
+        "clicks",
+        "impressions"
+      ],
+      "scope": "image",
+      "backfilled": "no",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "archive": "https://web.archive.org/web/20250116113326/https://support.google.com/webmasters/answer/6211453?hl=en",
+      "verified": true
+    },
+    {
+      "id": "gsc-2023-08-28-webstories-images",
+      "title": "Web Stories in Google Images not reported (fixed 2024-03-26)",
+      "start": "2023-08-28",
+      "end": "2024-03-26",
+      "pattern": "period",
+      "affects": [
+        "clicks",
+        "impressions"
+      ],
+      "scope": "image",
+      "backfilled": "no",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "archive": "https://web.archive.org/web/20250116113326/https://support.google.com/webmasters/answer/6211453?hl=en",
+      "verified": true
+    },
+    {
+      "id": "gsc-2024-03-04-event-appearance",
+      "title": "Event rich results shown differently: event search-appearance metrics drop (not a traffic drop)",
+      "start": "2024-03-04",
+      "end": "2024-03-04",
+      "pattern": "step",
+      "affects": [
+        "clicks",
+        "impressions"
+      ],
+      "scope": "search-appearance:event",
+      "backfilled": "n/a",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "archive": "https://web.archive.org/web/20250116113326/https://support.google.com/webmasters/answer/6211453?hl=en",
+      "verified": true
+    },
+    {
+      "id": "gsc-2024-01-09-job-counting",
+      "title": "Job listing/detail pages counted more accurately: clicks and impressions step up (not real growth)",
+      "start": "2024-01-09",
+      "end": "2024-01-09",
+      "pattern": "step",
+      "affects": [
+        "clicks",
+        "impressions"
+      ],
+      "scope": "search-appearance:job",
+      "backfilled": "n/a",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "archive": "https://web.archive.org/web/20250116113326/https://support.google.com/webmasters/answer/6211453?hl=en",
+      "verified": true
+    }
+  ],
+  "reportingChanges": [
+    {
+      "id": "gsc-2026-09-24-web-multimodal",
+      "kind": "measurement",
+      "title": "Search Console adds \"Web: multimodal\" (image-led searches, previously uncounted); the UI default becomes \"Web (text-based)\"",
+      "start": "2026-09-24",
+      "end": "2026-09-24",
+      "pattern": "step",
+      "affects": [],
+      "scope": "search-ui",
+      "url": "https://developers.google.com/search/blog/2026/09/web-multimodal-in-sc",
+      "verified": true,
+      "note": "New data, not moved data. UI totals may step up if you select both; API type=web exports are not known to change. Mark it as context, not as a ranking event.",
+      "severity": "info"
+    },
+    {
+      "id": "gsc-2026-05-07-faq-rich-results",
+      "kind": "serp-feature",
+      "title": "FAQ rich results no longer shown for any site: FAQ search-appearance impressions drop; pages that had FAQ snippets can lose CTR",
+      "start": "2026-05-07",
+      "end": "2026-05-07",
+      "pattern": "step",
+      "affects": [
+        "ctr",
+        "clicks"
+      ],
+      "scope": "search",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "verified": true,
+      "note": "Only relevant if your pages showed FAQ rich results before. FAQPage markup is still valid; there is just no rich result."
+    },
+    {
+      "id": "gsc-2025-06-16-ai-mode-counted",
+      "kind": "measurement",
+      "title": "AI Mode clicks, impressions and positions counted in the Search Console \"Web\" totals",
+      "start": "2025-06-16",
+      "end": "2025-06-17",
+      "pattern": "step",
+      "affects": [],
+      "scope": "search",
+      "url": "https://support.google.com/webmasters/answer/7042828",
+      "dateSource": "Search Engine Land, 2025-06-16 (https://searchengineland.com/google-ai-mode-traffic-data-search-console-457076)",
+      "verified": true,
+      "severity": "info",
+      "note": "AI Mode clicks and impressions are added to the \"Web\" totals from this date (no separate filter). Usage was small at first; for windows that straddle it, expect a modest step in totals that is not caused by your site."
+    },
+    {
+      "id": "gsc-2025-06-25-event-location",
+      "kind": "measurement",
+      "title": "Event rich results now require a physical location: Event items in the rich result report decrease",
+      "start": "2025-06-25",
+      "end": "2025-06-25",
+      "pattern": "step",
+      "affects": [],
+      "scope": "search-appearance:event",
+      "url": "https://support.google.com/webmasters/answer/6211453",
+      "archive": "https://web.archive.org/web/20250808122410/https://support.google.com/webmasters/answer/6211453?hl=en",
+      "verified": true,
+      "severity": "info"
+    }
+  ],
+  "unverified": [
+    {
+      "id": "num100-2025-09",
+      "kind": "measurement",
+      "title": "Google stopped honoring the &num=100 results parameter: rank-tracker impressions disappear (desktop impressions down, average position looks better, clicks unchanged)",
+      "start": "2025-09-10",
+      "end": "2025-09-14",
+      "pattern": "step",
+      "affects": [
+        "impressions",
+        "ctr",
+        "position"
+      ],
+      "scope": "search",
+      "url": "https://searchengineland.com/google-num100-impact-data-462231",
+      "source": "Third-party analyses (Search Engine Land, Locomotive, others); Google only said the parameter is not formally supported.",
+      "verified": false
+    }
+  ]
+}

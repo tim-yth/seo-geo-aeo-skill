@@ -1,0 +1,10 @@
+# Per-site workspaces hold private data and credentials — never commit them
+.seo-agent/
+**/secrets/
+*.key
+*service-account*.json
+node_modules/
+.DS_Store
+*.log
+# test fixtures are sample logs, not real ones
+!scripts/test/fixtures/**/*.log

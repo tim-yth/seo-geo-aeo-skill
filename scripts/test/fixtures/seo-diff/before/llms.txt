@@ -1,0 +1,4 @@
+# Example Coffee Lab
+
+- [Pour over guide](https://www.example.com/guides/pour-over/)
+- [Tea brewing basics](https://www.example.com/guides/tea/)

@@ -1,0 +1,13 @@
+# Cloudflare Pages / Netlify style
+/old-a /new-a 301
+/new-a /new-b 301
+/loop-x /loop-y 301
+/loop-y /loop-x 301
+/no-code /target
+/temp /target 302
+/dup /x 301
+/dup /y 301
+/to-home / 301
+/blog/* /articles/:splat 301
+/self /self 301
+/ok /target 308

@@ -1,0 +1,19 @@
+{
+  "candidates": [
+    {
+      "content": { "parts": [{ "text": "Example Coffee Lab has a detailed guide. Rival Brew covers ratios too." }], "role": "model" },
+      "finishReason": "STOP",
+      "groundingMetadata": {
+        "webSearchQueries": ["best pour over coffee guides"],
+        "searchEntryPoint": { "renderedContent": "<div>chips</div>" },
+        "groundingChunks": [
+          { "web": { "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AAA", "title": "example.com" } },
+          { "web": { "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/BBB", "title": "rival.com" } }
+        ],
+        "groundingSupports": [{ "segment": { "startIndex": 0, "endIndex": 40, "text": "Example Coffee Lab has a detailed guide." }, "groundingChunkIndices": [0] }]
+      }
+    }
+  ],
+  "usageMetadata": { "promptTokenCount": 10, "candidatesTokenCount": 20, "totalTokenCount": 30 },
+  "modelVersion": "test-gemini-served"
+}

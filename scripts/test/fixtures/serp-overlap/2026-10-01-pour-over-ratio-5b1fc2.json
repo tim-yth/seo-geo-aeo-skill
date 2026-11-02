@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "keyword": "pour over ratio",
+    "provider": "brave",
+    "country": "US",
+    "lang": "en",
+    "top": 10,
+    "fetchedAt": "2026-10-01T08:00:00.000Z"
+  },
+  "results": [
+    {
+      "rank": 1,
+      "url": "https://old.example/1",
+      "domain": "old.example",
+      "title": "Result 1",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 2,
+      "url": "https://old.example/2",
+      "domain": "old.example",
+      "title": "Result 2",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 3,
+      "url": "https://old.example/3",
+      "domain": "old.example",
+      "title": "Result 3",
+      "description": "",
+      "age": ""
+    }
+  ],
+  "ours": {
+    "rank": null,
+    "urls": []
+  },
+  "features": {}
+}

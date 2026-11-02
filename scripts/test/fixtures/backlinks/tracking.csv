@@ -1,0 +1,12 @@
+# 4-week summary: 12 sent, 3 replies, 2 live,,,,,,,,,,,,,,,,,,,,,
+id,contact_date,target,category,channel_and_draft_version,status,followup_date,live_date,live_url,has_link,target_page,anchor_text_verbatim,rel,consideration,gsc_first_seen,link_checked_on,link_status,referral_sessions_7d,referral_sessions_28d,engaged_sessions_28d,core_actions_28d,sign_ups_28d,notes
+O-01,2026-09-01,Example Blog,list,email v2,live,,2026-09-20,{{ORIGIN}}/article-live,yes,https://www.example.com/guides/pour-over/,"pour over ratio, explained",followed,none,2026-10-01,2026-10-01,live,4,12,9,3,1,"screenshot: shots/o-01.png"
+O-02,2026-09-02,Removed Media,media,email v1,live,,2026-09-21,{{ORIGIN}}/article-removed,yes,https://www.example.com/,Example Coffee,followed,none,,2026-10-01,live,0,2,1,0,0,
+O-03,2026-09-03,Nofollow Site,list,email v1,live,,2026-09-22,{{ORIGIN}}/article-nofollow,yes,https://www.example.com/guides/pour-over/,pour over,followed,none,,,,,,,,,
+O-04,2026-09-04,Noindex Site,directory,form,live,,2026-09-23,{{ORIGIN}}/article-noindex,yes,https://www.example.com/,Example Coffee,,none,,,,,,,,,"multi
+line note"
+O-05,2026-09-05,Gone Site,media,email v3,live,,2026-09-24,{{ORIGIN}}/article-gone,yes,https://www.example.com/,Example Coffee,followed,none,,,,,,,,,
+O-06,2026-09-06,Private Site,list,email v1,live,,2026-09-25,{{ORIGIN}}/private/article,yes,https://www.example.com/,Example Coffee,followed,none,,2026-10-01,live,,,,,,
+O-07,2026-09-07,Not live yet,list,email v1,sent,2026-09-14,,,,,,,,,,,,,,,,
+O-08,2026-09-08,Moved Site,list,email v1,live,,2026-09-26,{{ORIGIN}}/article-moved,yes,https://www.example.com/guides/pour-over/,pour over,followed,none
+O-09,2026-09-09,Forum,community,reply,live,,2026-09-27,{{ORIGIN}}/forum-post,yes,https://www.example.com/guides/pour-over/,pour over,,none,,,,,,,,,

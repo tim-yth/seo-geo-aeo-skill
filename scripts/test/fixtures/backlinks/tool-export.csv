@@ -1,0 +1,8 @@
+﻿ Referring Page URL ,Referring page title,DR,UR,Target URL,Anchor,NOFOLLOW,UGC,Sponsored,First Seen,Last Seen
+https://blog.example.org/brewing-notes,Brewing notes,41,12,https://www.example.com/guides/pour-over/,pour over ratio,false,false,false,2026-08-01 10:00:00,2026-10-30
+https://news.example.net/coffee/2026,Coffee in 2026,63,20,https://www.example.com/reviews/burr-grinders/,"the best burr grinder, for espresso",true,false,false,2026-09-12,2026-10-29
+https://community.example.net/thread/9,Thread,30,5,https://www.example.com/guides/pour-over/,click here,false,true,false,2026-10-02,2026-10-28
+https://zh.example.org/文章/手沖,手沖文章,22,4,https://www.example.com/guides/pour-over/,這裡,false,false,false,2026-07-15,2026-10-01
+https://partner.example.org/review,Review,35,9,https://www.example.com/,great resource,false,false,true,2026-06-01,2026-10-20
+https://partner.example.org/review,Review,35,9,https://rival.com/page,rival link,false,false,false,2026-06-01,2026-10-20
+not a url,x,1,1,https://www.example.com/,x,false,false,false,,

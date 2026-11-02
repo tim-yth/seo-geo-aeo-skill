@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.example.com/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/en/guides/pour-over/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/about/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/pour-over/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/french-press/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/aeropress/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/grinders/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/kettles/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/water/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/filters/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/private-notes/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/brew-ratio/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/storage/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/milk/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/espresso/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/tea/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/scales/</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://www.example.com/guides/beans/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/roast/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/decaf/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/moka-pot/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/cold-brew.html</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/old-grinder/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/instant/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/guides/percolator/</loc><lastmod>2026-10-01</lastmod></url>
+</urlset>

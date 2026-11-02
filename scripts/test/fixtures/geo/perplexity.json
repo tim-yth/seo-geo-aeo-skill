@@ -1,0 +1,26 @@
+{
+  "id": "resp_pplx_1",
+  "object": "response",
+  "model": "perplexity/test-served",
+  "status": "completed",
+  "error": null,
+  "output": [
+    {
+      "type": "search_results",
+      "queries": ["手沖咖啡 教學"],
+      "results": [
+        { "id": 1, "url": "https://www.example.com/zh/guides/pour-over/", "title": "手沖咖啡教學", "snippet": "..." },
+        { "id": 2, "url": "https://rival.com/pour-over", "title": "Rival", "snippet": "..." },
+        { "id": 3, "url": "https://forum.example.org/thread/1", "title": "Forum", "snippet": "..." }
+      ]
+    },
+    {
+      "type": "message",
+      "id": "msg_p1",
+      "role": "assistant",
+      "status": "completed",
+      "content": [{ "type": "output_text", "text": "推薦範例咖啡的教學[web:1]，Rival Brew 也不錯[web:2]。", "annotations": [] }]
+    }
+  ],
+  "usage": { "input_tokens": 40, "output_tokens": 30, "total_tokens": 70, "cost": { "currency": "USD", "input_cost": 0.001, "output_cost": 0.001, "total_cost": 0.0045 } }
+}

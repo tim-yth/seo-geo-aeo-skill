@@ -1,0 +1,14 @@
+url,final_url,status,redirects,in_sitemap,indexable,canonical,title,h1
+https://www.example.com/,https://www.example.com/,200,0,yes,yes,https://www.example.com/,Example Coffee Lab | Example Coffee,Example Coffee Lab
+https://www.example.com/guides/pour-over,https://www.example.com/guides/pour-over,200,0,yes,yes,https://www.example.com/guides/pour-over,Pour Over Guide | Example Coffee,Pour over guide
+https://www.example.com/guides/french-press,https://www.example.com/guides/french-press,200,0,yes,yes,https://www.example.com/guides/french-press,French Press Guide | Example Coffee,French press guide
+https://www.example.com/blog/,https://www.example.com/blog/,200,0,yes,yes,https://www.example.com/blog/,Blog | Example Coffee,Blog
+https://www.example.com/reviews/best-burr-grinders/,https://www.example.com/reviews/best-burr-grinders/,200,0,yes,yes,https://www.example.com/reviews/best-burr-grinders/,Best burr grinders (2026) | Example Coffee,Best burr grinders
+https://www.example.com/guides/cold-brew/,https://www.example.com/guides/cold-brew/,200,0,yes,yes,https://www.example.com/guides/cold-brew/,Cold brew: the ratio guide | Example Coffee,Cold brew
+https://www.example.com/guides/kettle-maintenance/,https://www.example.com/guides/kettle-maintenance/,200,0,yes,yes,https://www.example.com/guides/kettle-maintenance/,Kettle care | Example Coffee,Kettle care
+https://www.example.com/contact/,https://www.example.com/contact/,200,0,yes,yes,https://www.example.com/contact/,Contact | Example Coffee,Contact
+https://www.example.com/tools/brew-calculator/,https://www.example.com/tools/brew-calculator/,200,0,yes,yes,https://www.example.com/tools/brew-calculator/,Brew calculator | Example Coffee,Brew calculator
+https://www.example.com/guides/手沖咖啡/,https://www.example.com/guides/手沖咖啡/,200,0,yes,yes,https://www.example.com/guides/手沖咖啡/,手沖咖啡入門指南：器材、比例與步驟 | Example Coffee,手沖咖啡入門指南
+https://www.example.com/about/,https://www.example.com/about/,200,0,yes,yes,https://www.example.com/about/,About Example Coffee Lab | Example Coffee,About
+https://www.example.com/reviews/spring-sale-2021/,https://www.example.com/reviews/spring-sale-2021/,404,0,no,no,,Not found,
+https://www.example.com/drafts/welcome-old/,https://www.example.com/drafts/welcome-old/,200,0,no,no,https://www.example.com/drafts/welcome-old/,Welcome | Example Coffee,Welcome

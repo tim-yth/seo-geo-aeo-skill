@@ -1,0 +1,32 @@
+{
+  "id": "resp_fixture_2",
+  "object": "response",
+  "status": "completed",
+  "model": "test-openai-served",
+  "output": [
+    {
+      "type": "web_search_call",
+      "id": "ws_2",
+      "status": "completed",
+      "action": { "type": "search", "query": "pour over guides", "sources": [{ "type": "url", "url": "https://rival.com/pour-over" }, { "type": "url", "url": "https://listicle.example.net/top-10-coffee-sites" }] }
+    },
+    {
+      "type": "message",
+      "id": "msg_2",
+      "status": "completed",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "Rival Brew is the best choice for pour over ratios.",
+          "annotations": [
+            { "type": "url_citation", "start_index": 0, "end_index": 10, "url": "https://rival.com/pour-over", "title": "Rival" },
+            { "type": "url_citation", "start_index": 11, "end_index": 20, "url": "https://listicle.example.net/top-10-coffee-sites", "title": "Top 10 coffee sites" },
+            { "type": "url_citation", "start_index": 21, "end_index": 30, "url": "https://reviews.example.org/best-coffee-guides", "title": "Coffee guide reviews" }
+          ]
+        }
+      ]
+    }
+  ],
+  "usage": { "input_tokens": 100, "output_tokens": 40, "total_tokens": 140 }
+}

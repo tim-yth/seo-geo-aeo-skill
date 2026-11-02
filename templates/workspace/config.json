@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "site": {
+    "url": "",
+    "name": "",
+    "language": "",
+    "country": "",
+    "timezone": "",
+    "niche": "",
+    "brandTerms": []
+  },
+  "brand": {
+    "officialName": "",
+    "alternateNames": [],
+    "founder": "",
+    "foundingDate": "",
+    "sameAs": [],
+    "contactUrl": "",
+    "areaServed": "",
+    "authors": []
+  },
+  "gsc": {
+    "siteUrl": "",
+    "credentialsFile": ".seo-agent/secrets/google-service-account.json"
+  },
+  "ga4": {
+    "propertyId": "",
+    "credentialsFile": ".seo-agent/secrets/google-service-account.json"
+  },
+  "bing": {
+    "siteUrl": "",
+    "apiKeyEnv": "BING_WEBMASTER_API_KEY"
+  },
+  "indexnow": {
+    "keyFile": ".seo-agent/secrets/indexnow.key",
+    "keyLocation": ""
+  },
+  "pagespeed": {
+    "apiKeyEnv": "PAGESPEED_API_KEY"
+  },
+  "serp": {
+    "provider": "brave",
+    "apiKeyEnv": "BRAVE_SEARCH_API_KEY",
+    "country": "",
+    "lang": ""
+  },
+  "repo": {
+    "path": "",
+    "contentGlobs": [],
+    "urlTemplate": "",
+    "deployCommand": "",
+    "productionBranch": "main"
+  },
+  "pageGroups": {
+    "home": "^/$"
+  },
+  "queryGroups": {},
+  "competitors": [],
+  "seedKeywords": [],
+  "aiEngines": ["chatgpt", "perplexity", "gemini", "google-ai-overviews", "copilot"],
+  "guardrails": [],
+  "geo": {
+    "promptsFile": "geo-prompts.csv",
+    "engines": [],
+    "models": {
+      "openai": "",
+      "perplexity": "",
+      "gemini": "",
+      "anthropic": ""
+    },
+    "samples": 3,
+    "maxCalls": 100,
+    "country": "",
+    "language": "",
+    "controlPrompts": [],
+    "competitorBrands": [],
+    "ownDomains": [],
+    "allowGeminiGrounding": false
+  },
+  "providers": {},
+  "protect": {
+    "paths": [],
+    "urls": []
+  },
+  "logs": {
+    "inputs": [],
+    "format": "auto",
+    "hosts": []
+  }
+}

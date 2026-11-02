@@ -1,0 +1,20 @@
+run_date,engine,locale,intent,prompt,mentioned,rank,cited_url,reason,accuracy,pricing_claim,competitors,action_needed,notes,prompt_id,portfolio_version,cohort,arm,variant_group,branded,topic,country,method,k,searched,retrieved,cited,recommended,cited_domains
+YYYY-MM-DD,chatgpt,zh-TW,品類推薦,推薦幾個{語言}的{品類}網站,,,,,,,,,,p01,v1,core,,,n,,TW,ui-manual,1,,,,,
+YYYY-MM-DD,chatgpt,zh-TW,免費／先試,我想免費用{品類}，不想馬上付費，有哪些網站？,,,,,,,,,,p02,v1,core,,,n,,TW,ui-manual,1,,,,,
+YYYY-MM-DD,chatgpt,zh-TW,資料庫查詢,哪個網站可以查{資料庫主題}？,,,,,,,,,,p03,v1,core,,,n,,TW,ui-manual,1,,,,,
+YYYY-MM-DD,chatgpt,zh-TW,利基子類,{利基子類}推薦哪個網站？,,,,,,,,,,p04,v1,core,,,n,,TW,ui-manual,1,,,,,
+YYYY-MM-DD,chatgpt,zh-TW,可信度,{品類}準嗎／可靠嗎？有哪些工具可以先試？,,,,,,,,,,p05,v1,core,,,n,,TW,ui-manual,1,,,,,
+YYYY-MM-DD,chatgpt,zh-TW,使用情境,有哪些適合{使用情境}的{品類}網站？,,,,,,,,,,p06,v1,core,,,n,,TW,ui-manual,1,,,,,
+YYYY-MM-DD,chatgpt,zh-TW,快速決策工具,{快速決策需求}推薦哪個網站？,,,,,,,,,,p07,v1,core,,,n,,TW,ui-manual,1,,,,,
+YYYY-MM-DD,chatgpt,en,品類推薦,What are good free {category} websites?,,,,,,,,,,p08,v1,core,,,n,,US,ui-manual,1,,,,,
+YYYY-MM-DD,chatgpt,en,學習,Where can I learn {niche topic} online?,,,,,,,,,,p09,v1,core,,,n,,US,ui-manual,1,,,,,
+YYYY-MM-DD,chatgpt,en,使用情境,Best {category} site for {use case},,,,,,,,,,p10,v1,core,,,n,,US,ui-manual,1,,,,,
+YYYY-MM-DD,chatgpt,ja,品類推薦,{カテゴリ}のおすすめサイトは？,,,,,,,,,,p11,v1,core,,,n,,JP,ui-manual,1,,,,,
+YYYY-MM-DD,chatgpt,ko,品類推薦,{카테고리} 사이트 추천,,,,,,,,,,p12,v1,core,,,n,,KR,ui-manual,1,,,,,
+2026-01-05,perplexity,zh-TW,免費／先試,我想免費用記帳軟體，不想馬上付費，有哪些網站？,yes,3,https://example.com/pricing/,提到有免費方案、可匯出報表,partly_wrong,wrong,競品甲;競品乙,llms.txt 補 Free and paid usage 段；定價頁 FAQ 寫清楚免費方案上限；記 D0,範例列：未登入＋開啟搜尋；回答說完全免費（錯）,e01,v1,core,treated,,n,定價,TW,ui-manual,1,y,y,y,y,example.com;competitor-a.example;reviews.example
+2026-01-07,perplexity,zh-TW,免費／先試,我想免費用記帳軟體，不想馬上付費，有哪些網站？,no,,,,,,競品甲;競品乙,,範例列：同一題第 2 次重複（分散在不同天）；這次沒提到你：看多次的出現率，不看單次,e01,v1,core,treated,,n,定價,TW,ui-manual,2,y,y,n,n,competitor-a.example;competitor-b.example
+2026-01-05,chatgpt,en,使用情境,Best invoicing site for freelancers,no,,,,,,Competitor A;Competitor B,站外引用：清單文與評論網站檔案（見 12-offsite-citations）,範例列：未登入＋開啟搜尋；這個主題本波沒改，當對照題,e02,v1,core,control,,n,發票,US,ui-manual,1,y,n,n,n,competitor-a.example;listicle.example;reviews.example
+2026-01-05,google-ai-overviews,zh-TW,資料庫查詢,哪個網站可以查台灣營業稅申報期限？,yes,1,https://example.com/blog/,引用了稅務行事曆說明,correct,n/a,政府網站,引用網址錯頁：應為 /guides/vat-calendar/；補該頁膠囊與內鏈,範例列：引用網址不符意圖,e03,v1,core,treated,,n,稅務,TW,ui-manual,1,y,y,y,n/a,example.com;gov.example
+2026-01-05,perplexity,zh-TW,免費／先試,有沒有不用先付錢就能試用的記帳軟體？,yes,4,https://example.com/pricing/,提到免費方案,correct,correct,競品甲,,範例列：e01 的同義改寫（安慰劑），和 e01 同一個 variant_group；只換措辭、不改意思,e01-s1,v1,core,placebo,e01,n,定價,TW,ui-manual,1,y,y,y,y,example.com;competitor-a.example
+2026-01-05,chatgpt,zh-TW,品牌,{品牌名}是什麼網站？可以免費用嗎？,yes,,https://example.com/,正確描述功能與免費範圍,correct,correct,,,範例列：品牌題（診斷用）：一定該提到你；只算正確率，不進主指標,b01,v1,core,,,y,品牌,TW,ui-manual,1,y,y,y,n/a,example.com
+2026-01-05,perplexity,zh-TW,負對照,推薦幾個好用的線上{無關品類}網站,no,,,,,,,,範例列：負對照（無關品類）：一定不該提到你；提到了代表量測或引擎變了,n01,v1,core,negative,,n,負對照,TW,ui-manual,1,y,n,n,n,

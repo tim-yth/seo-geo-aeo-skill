@@ -1,0 +1,23 @@
+{
+  "ptr": {
+    "198.51.100.200": ["msnbot-198-51-100-200.search.msn.com"],
+    "192.0.2.10": ["crawl-192-0-2-10.googlebot.com"],
+    "192.0.2.11": ["crawl-192-0-2-11.googlebot.com"],
+    "192.0.2.12": ["crawl-192-0-2-12.googlebot.com"],
+    "192.0.2.13": ["crawl-192-0-2-13.googlebot.com"],
+    "2001:db8:4801:10::abcd": ["crawl-2001-db8-4801-10--abcd.googlebot.com"],
+    "203.0.113.77": ["crawl-203-0-113-77.googlebot.com.attacker.example"],
+    "192.0.2.130": ["192-0-2-130.applebot.apple.com"],
+    "192.0.2.193": ["192-0-2-193.crawl.commoncrawl.org"]
+  },
+  "forward": {
+    "msnbot-198-51-100-200.search.msn.com": ["198.51.100.200"],
+    "crawl-192-0-2-10.googlebot.com": ["192.0.2.10"],
+    "crawl-192-0-2-11.googlebot.com": ["192.0.2.11"],
+    "crawl-192-0-2-12.googlebot.com": ["192.0.2.12"],
+    "crawl-192-0-2-13.googlebot.com": ["192.0.2.13"],
+    "crawl-2001-db8-4801-10--abcd.googlebot.com": ["2001:db8:4801:10:0:0:0:abcd"],
+    "192-0-2-130.applebot.apple.com": ["192.0.2.130"],
+    "192-0-2-193.crawl.commoncrawl.org": ["192.0.2.193"]
+  }
+}

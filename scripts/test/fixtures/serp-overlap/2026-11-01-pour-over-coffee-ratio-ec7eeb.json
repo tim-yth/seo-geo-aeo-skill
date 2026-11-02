@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "keyword": "pour over coffee ratio",
+    "provider": "brave",
+    "country": "US",
+    "lang": "en",
+    "top": 10,
+    "fetchedAt": "2026-11-01T08:00:00.000Z"
+  },
+  "results": [
+    {
+      "rank": 1,
+      "url": "https://rival.com/pour-over-ratio?utm_source=newsletter",
+      "domain": "rival.com",
+      "title": "Result 1",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 2,
+      "url": "https://competitor-a.com/guides/ratio/",
+      "domain": "competitor-a.com",
+      "title": "Result 2",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 3,
+      "url": "https://competitor-b.com/blog/ratios",
+      "domain": "competitor-b.com",
+      "title": "Result 3",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 4,
+      "url": "https://rival.com/calculator/",
+      "domain": "rival.com",
+      "title": "Result 4",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 5,
+      "url": "https://example.net/coffee/water-ratio#top",
+      "domain": "example.net",
+      "title": "Result 5",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 6,
+      "url": "https://competitor-c.com/how-to/pour-over",
+      "domain": "competitor-c.com",
+      "title": "Result 6",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 7,
+      "url": "https://www.example.com/guides/pour-over/",
+      "domain": "example.com",
+      "title": "Result 7",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 8,
+      "url": "https://x1.example/a",
+      "domain": "x1.example",
+      "title": "Result 8",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 9,
+      "url": "https://x2.example/b",
+      "domain": "x2.example",
+      "title": "Result 9",
+      "description": "",
+      "age": ""
+    },
+    {
+      "rank": 10,
+      "url": "https://x3.example/c",
+      "domain": "x3.example",
+      "title": "Result 10",
+      "description": "",
+      "age": ""
+    }
+  ],
+  "ours": {
+    "rank": null,
+    "urls": []
+  },
+  "features": {}
+}

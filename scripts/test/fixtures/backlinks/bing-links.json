@@ -1,0 +1,13 @@
+{
+  "meta": { "siteUrl": "https://www.example.com/", "fetchedAt": "2026-11-01T03:00:00.000Z", "source": "bing-webmaster" },
+  "linkCounts": [
+    { "url": "https://www.example.com/guides/pour-over/", "count": 12 },
+    { "url": "https://www.example.com/old-guide/", "count": 3 }
+  ],
+  "links": [
+    { "target": "https://www.example.com/guides/pour-over/", "source": "https://blog.example.org/brewing-notes", "anchor": "pour over ratio" },
+    { "target": "https://www.example.com/", "source": "https://directory.example.net/coffee-tools?utm_source=feed", "anchor": "Example Coffee" },
+    { "target": "https://www.example.com/old-guide/", "source": "https://forum.example.org/t/123", "anchor": "www.example.com/old-guide" },
+    { "target": "https://www.example.com/guides/pour-over/", "source": "https://www.example.com/blog/", "anchor": "internal link" }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "_comment": "Annotated example. Copy values into config.json (which must stay valid JSON). Keys starting with _comment are ignored by the scripts. Never put secrets in this file: credentials are referenced by FILE PATH or ENV VAR NAME only.",
+  "version": 1,
+  "site": {
+    "_comment": "url: canonical origin (protocol + host). language: BCP-47 (en, zh-TW, ja). country: ISO-3166 alpha-3 as used by Search Console (usa, twn, jpn). timezone: IANA name used for deploy dates and acceptance dates. brandTerms: spellings people search for your brand (used to split brand vs non-brand queries).",
+    "url": "https://www.example.com/",
+    "name": "Example Coffee Lab",
+    "language": "zh-TW",
+    "country": "TWN",
+    "timezone": "Asia/Taipei",
+    "niche": "pour-over coffee guides and brewing calculators",
+    "brandTerms": ["example coffee", "examplecoffee", "example coffee lab"]
+  },
+  "brand": {
+    "_comment": "Entity facts used for Organization/Person schema, llms.txt and consistent brand descriptions across the web (GEO). sameAs: official profiles (Wikipedia, Wikidata, LinkedIn, YouTube, ...).",
+    "officialName": "Example Coffee Lab",
+    "alternateNames": ["ECL"],
+    "founder": "Jane Doe",
+    "foundingDate": "2019-04-01",
+    "sameAs": ["https://www.youtube.com/@examplecoffee", "https://www.linkedin.com/company/example-coffee-lab"],
+    "contactUrl": "https://www.example.com/contact/",
+    "areaServed": "TW",
+    "authors": [{ "name": "Jane Doe", "url": "https://www.example.com/about/jane/", "bio": "Q-grader, 10 years in specialty coffee" }]
+  },
+  "gsc": {
+    "_comment": "siteUrl: exact Search Console property. Domain property: sc-domain:example.com. URL-prefix property: https://www.example.com/ (protocol, host and trailing slash must match). credentialsFile: service-account JSON (chmod 600) whose client_email was added in Search Console -> Settings -> Users and permissions.",
+    "siteUrl": "sc-domain:example.com",
+    "credentialsFile": ".seo-agent/secrets/google-service-account.json"
+  },
+  "ga4": {
+    "_comment": "propertyId: numeric GA4 Property ID (Admin -> Property details), NOT the G-XXXX Measurement ID. Add the service account as Viewer in Admin -> Property access management.",
+    "propertyId": "123456789",
+    "credentialsFile": ".seo-agent/secrets/google-service-account.json"
+  },
+  "bing": {
+    "_comment": "Bing Webmaster Tools (used by bing-export.mjs for traffic, queries, pages, crawl errors, inbound links and keyword demand; backlinks.mjs reads its link list). The API key lives in the environment variable named by apiKeyEnv, never in this file. Generate it in Bing Webmaster Tools -> Settings -> API access.",
+    "siteUrl": "https://www.example.com/",
+    "apiKeyEnv": "BING_WEBMASTER_API_KEY"
+  },
+  "indexnow": {
+    "_comment": "keyFile holds the IndexNow key (also published at keyLocation on your site). keyLocation: public URL of the key file.",
+    "keyFile": ".seo-agent/secrets/indexnow.key",
+    "keyLocation": "https://www.example.com/0123456789abcdef0123456789abcdef.txt"
+  },
+  "pagespeed": {
+    "_comment": "PageSpeed Insights: in practice you need an API key (without one the shared quota is often exhausted). The key lives in the environment variable named by apiKeyEnv.",
+    "apiKeyEnv": "PAGESPEED_API_KEY"
+  },
+  "serp": {
+    "_comment": "Optional live SERP snapshots via the Brave Search API (independent index; approximates, does not equal, Google). country: 2-letter code (TW, US, ALL). lang: Brave search_lang (en, zh-hant, zh-hans, jp, ko).",
+    "provider": "brave",
+    "apiKeyEnv": "BRAVE_SEARCH_API_KEY",
+    "country": "TW",
+    "lang": "zh-hant"
+  },
+  "repo": {
+    "_comment": "Local checkout of the site's source. contentGlobs: content files relative to repo.path. urlTemplate maps a content file to its live URL: {slug} = file name without extension, {path} = path relative to the glob base without extension (index files map to their folder).",
+    "path": "../example-site",
+    "contentGlobs": ["content/blog/**/*.md"],
+    "urlTemplate": "https://www.example.com/blog/{slug}/",
+    "deployCommand": "npm run deploy",
+    "productionBranch": "main"
+  },
+  "pageGroups": {
+    "_comment": "name -> JavaScript regex tested against the URL path (+query). First match wins; unmatched pages go to 'other'.",
+    "home": "^/$",
+    "blog": "^/blog/",
+    "guides": "^/guides/",
+    "tools": "^/tools/"
+  },
+  "queryGroups": {
+    "_comment": "Optional custom query groups for gsc-compare: name -> case-insensitive JavaScript regex tested against the query.",
+    "how-to": "(how to|怎麼|如何)",
+    "comparison": "( vs |比較|推薦)"
+  },
+  "competitors": [
+    {
+      "domain": "competitor-a.com",
+      "why": "Top 3 for our main non-brand terms"
+    },
+    {
+      "domain": "competitor-b.com",
+      "why": "Cited by ChatGPT/Perplexity for our topic"
+    }
+  ],
+  "seedKeywords": ["手沖咖啡", "pour over coffee ratio"],
+  "aiEngines": ["chatgpt", "perplexity", "gemini", "google-ai-overviews", "copilot"],
+  "guardrails": [
+    {
+      "_comment": "Queries that must not get worse while you experiment (usually the main clicks of your core pages, not the queries you are trying to win). query: primary spelling (early-warning series uses it exactly, with page). variants / queryRegex: other spellings merged into the decision series. scope: site (default) or page. baseline {start,end}: a clean final 7-day window before changes; its value is used unrounded. margin (1.0): stop line = baseline + margin, compared with >= (or set maxPosition explicitly). rollbackPosition (default baseline + 1.2): numbers condition for considering a rollback (also needs a manual Google SERP check and the user's consent). warnPosition (default stop line) and warnDays (3): consecutive days above it trigger a warning. clickQueries + minClicksPerDay (default 72% of the baseline clicks/day): click alarm for a fixed query group. minShare (0.9): warn when the main URL holds less of the query's impressions (possible cannibalization). Never loosen an existing threshold; after a confirmed core update start a new, separately named baseline.",
+      "query": "手沖咖啡",
+      "variants": ["手沖 咖啡"],
+      "scope": "site",
+      "page": "https://www.example.com/guides/pour-over/",
+      "baseline": {
+        "start": "2026-09-01",
+        "end": "2026-09-07"
+      },
+      "margin": 1,
+      "maxPosition": null,
+      "rollbackPosition": null,
+      "warnDays": 3,
+      "clickQueries": ["手沖咖啡", "手沖咖啡 比例", "pour over coffee"],
+      "minClicksPerDay": null,
+      "minShare": 0.9,
+      "note": "Main money keyword; 2 spellings merged, site-wide"
+    }
+  ],
+  "geo": {
+    "_comment": "AI-answer visibility tracking (geo-track.mjs). Prompts come from geo-prompts.csv. API runs are optional and metered: an engine runs only when its key env var (providers.<engine>.apiKeyEnv or the default) is set AND a model id is set in models. No model is hardcoded: copy current ids from each provider's model list (for perplexity you may also write \"effort:<level>\" to use the Agent API's effort presets instead of a model id). Dry run is the default; --run executes. samples = repetitions per prompt and engine, fixed in advance. maxCalls caps one run across all engines. country/language set the search location. controlPrompts: unrelated-category prompts where your brand must NOT appear (measurement check). competitorBrands: names to count in answers (competitor domains come from competitors). ownDomains: extra domains that count as yours when cited (a docs subdomain, a second ccTLD); the site host is always included. Optional anthropicTool overrides the web search tool version string. allowGeminiGrounding stays false unless you have checked the Gemini API terms (they restrict storing and analysing grounded results).",
+    "promptsFile": "geo-prompts.csv",
+    "engines": ["openai", "perplexity"],
+    "models": {
+      "openai": "",
+      "perplexity": "",
+      "gemini": "",
+      "anthropic": ""
+    },
+    "samples": 3,
+    "maxCalls": 100,
+    "country": "TW",
+    "language": "zh-TW",
+    "controlPrompts": ["推薦幾個好用的線上記帳軟體"],
+    "competitorBrands": ["Competitor A", "Competitor B"],
+    "ownDomains": ["docs.example.com"],
+    "allowGeminiGrounding": false
+  },
+  "providers": {
+    "_comment": "Optional metered or paid APIs, by environment-variable NAME only (never the key). monthlyBudgetUSD: scripts refuse runs that would exceed it (spend is logged in logs/spend.csv); perRunBudgetUSD caps one run; perCallUSD overrides the rough built-in cost estimate. AI engines (openai, perplexity, anthropic, gemini) are used by geo-track.mjs. dataforseo, ahrefs and semrush have no built-in adapter: export CSVs from them (backlinks.mjs import --csv) or let the agent use their MCP servers; scripts never call MCP servers.",
+    "openai": {
+      "apiKeyEnv": "OPENAI_API_KEY",
+      "monthlyBudgetUSD": 20
+    },
+    "perplexity": {
+      "apiKeyEnv": "PERPLEXITY_API_KEY",
+      "monthlyBudgetUSD": 10
+    },
+    "anthropic": {
+      "apiKeyEnv": "ANTHROPIC_API_KEY",
+      "monthlyBudgetUSD": 20
+    },
+    "dataforseo": {
+      "loginEnv": "DATAFORSEO_LOGIN",
+      "passwordEnv": "DATAFORSEO_PASSWORD",
+      "monthlyBudgetUSD": 0
+    }
+  },
+  "protect": {
+    "_comment": "Pages people fixed by hand that generators must not overwrite (rule: never let a batch job undo manual work). paths: globs relative to the build output that seo-diff.mjs compares (any change blocks the deploy unless --allow). urls: protected pages whose visible text must not change; seo-diff also reports lost internal links to them. Rows with protected=true in content-inventory.csv are protected too.",
+    "paths": ["blog/pricing-explained/index.html"],
+    "urls": ["https://www.example.com/guides/pour-over/"]
+  },
+  "logs": {
+    "_comment": "Optional defaults for log-analyze.mjs (flags win): folders or files with server/CDN access logs (.gz ok), their format (auto, combined, common, cloudflare-json, json, csv) and the hosts to keep. Raw log lines and visitor IPs are never copied into the workspace.",
+    "inputs": ["/var/log/nginx/"],
+    "format": "auto",
+    "hosts": ["www.example.com"]
+  }
+}

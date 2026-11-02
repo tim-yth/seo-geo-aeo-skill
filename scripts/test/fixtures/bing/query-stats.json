@@ -1,0 +1,5 @@
+{"d":[
+  {"__type":"QueryStats:#Microsoft.Bing.Webmaster.Api","AvgClickPosition":2,"AvgImpressionPosition":3,"Clicks":5,"Date":"{{DATE:2026-10-04}}","Impressions":100,"Query":"pour over ratio"},
+  {"__type":"QueryStats:#Microsoft.Bing.Webmaster.Api","AvgClickPosition":3,"AvgImpressionPosition":3.6,"Clicks":7,"Date":"{{DATE:2026-10-11}}","Impressions":150,"Query":"pour over ratio"},
+  {"__type":"QueryStats:#Microsoft.Bing.Webmaster.Api","AvgClickPosition":-1,"AvgImpressionPosition":9,"Clicks":0,"Date":"{{DATE:2026-10-04}}","Impressions":40,"Query":"cold brew"}
+]}

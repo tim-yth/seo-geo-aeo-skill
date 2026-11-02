@@ -1,0 +1,292 @@
+{
+  "_readme": [
+    "每個頂層 key 是一種頁型。陣列裡的每個物件，各放進一個 <script type=\"application/ld+json\">。",
+    "把所有 {…} 換成真實內容；不得留下 placeholder、example.com、TODO。",
+    "全站只有一個 Organization @id（https://example.com/#organization）。其他頁的 author、publisher 都引用它，並附上 name 與 url。",
+    "sameAs 只放官方帳號，而且同一個連結必須出現在站上的可見處（頁尾或 About）。contactPoint 只放已驗證的信箱。",
+    "AI 角色或 AI 助理用 SoftwareApplication，不要用 Person。Person 只給真實具名、有作者頁的人。",
+    "FAQPage 只在畫面上真的有 FAQ 區時才加：Google 自 2026-05-07 起對所有網站停止顯示 FAQ 複合式結果（2026-11-02 查證），它的用處只剩問答對齊、方便抽取。每一題都必須逐字出現在頁面正文（上線門檻）；新寫、重寫的頁題數要和畫面相同，既有模板差一題列為待修；一頁只放一個 FAQPage。",
+    "實體頁的 DefinedTerm.description 等於答案膠囊的定義句（45–75 字）；FAQ 第一題是膠囊題。",
+    "只有站內真的有搜尋功能才加 WebSite 的 SearchAction；只有真實評價才加 aggregateRating；offers 與 isAccessibleForFree 照實寫。",
+    "列表頁的 ItemList：numberOfItems 寫全量，itemListElement 最多內嵌 35 筆。",
+    "輸出到 HTML 時，把 JSON 字串裡的 < 寫成 \\u003c，避免 </script> 提早結束區塊。",
+    "citation 依每頁主題給，不要用同一組來源套到所有文章。",
+    "部署前依 Google 各型別的規格驗證必填屬性與值格式；已退役的型別只標資訊級，不當錯誤。全站同一個 @id 在每一頁的 @type 都要相同，引用的 @id 都要有宣告。",
+    "logo、image 這類資產網址要真的存在（回 200，content-type 是圖片）；不要指向 CDN 子網域上不存在的檔。",
+    "品牌 name 在 Organization、WebSite、title 尾綴、頁尾、llms.txt 都用同一個字串（含空格與中英順序）。",
+    "不要拿自己收集的評價加 aggregateRating 換星等；只有頁面上看得到的真實評價才標。"
+  ],
+  "homepage": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://example.com/#organization",
+        "name": "{BRAND_NAME}",
+        "alternateName": ["{ALTERNATE_NAME}"],
+        "url": "https://example.com/",
+        "logo": { "@type": "ImageObject", "url": "https://example.com/logo.png" },
+        "description": "{一句話定位，與 llms.txt 相同}",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "{VERIFIED_EMAIL}",
+          "url": "https://example.com/contact/",
+          "availableLanguage": ["zh-TW", "en"]
+        },
+        "sameAs": ["{OFFICIAL_PROFILE_URL_ALSO_LINKED_ON_SITE}"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://example.com/#website",
+        "url": "https://example.com/",
+        "name": "{BRAND_NAME}",
+        "inLanguage": "zh-TW",
+        "publisher": { "@id": "https://example.com/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://example.com/#webpage",
+        "url": "https://example.com/",
+        "name": "{首頁 title}",
+        "inLanguage": "zh-TW",
+        "isPartOf": { "@id": "https://example.com/#website" },
+        "about": { "@id": "https://example.com/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://example.com/#application",
+        "name": "{PRODUCT_NAME}",
+        "applicationCategory": "{BusinessApplication 或 LifestyleApplication…}",
+        "operatingSystem": "Web",
+        "url": "https://example.com/",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "{CURRENCY}",
+          "description": "{免費範圍，照事實表逐字寫}"
+        },
+        "provider": { "@id": "https://example.com/#organization" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://example.com/#service-{PRODUCT_LINE}",
+        "name": "{產品線名稱}",
+        "serviceType": "{服務類型}",
+        "url": "https://example.com/{product-line}/",
+        "provider": { "@id": "https://example.com/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://example.com/#assistant",
+        "name": "{AI_ASSISTANT_NAME}",
+        "applicationCategory": "{同上}",
+        "description": "{這是 AI 介面：它做什麼、不做什麼}",
+        "isPartOf": { "@id": "https://example.com/#application" },
+        "provider": { "@id": "https://example.com/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://example.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "{首頁 FAQ 問題一（必須出現在正文）}",
+            "acceptedAnswer": { "@type": "Answer", "text": "{答案一，與正文一致}" }
+          },
+          {
+            "@type": "Question",
+            "name": "{免費能用到哪裡？}",
+            "acceptedAnswer": { "@type": "Answer", "text": "{照事實表逐字寫}" }
+          }
+        ]
+      }
+    ]
+  },
+  "aboutPage": [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "@id": "https://example.com/about/#webpage",
+      "url": "https://example.com/about/",
+      "name": "{關於頁 title}",
+      "inLanguage": "zh-TW",
+      "mainEntity": {
+        "@type": "Organization",
+        "@id": "https://example.com/#organization",
+        "name": "{BRAND_NAME}",
+        "url": "https://example.com/",
+        "sameAs": ["{OFFICIAL_PROFILE_URL_ALSO_LINKED_ON_SITE}"]
+      }
+    }
+  ],
+  "toolOrProductPage": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "@id": "https://example.com/{tool}/#webapplication",
+      "name": "{工具名稱}",
+      "url": "https://example.com/{tool}/",
+      "description": "{工具做什麼，一兩句}",
+      "applicationCategory": "{同上}",
+      "operatingSystem": "Web",
+      "inLanguage": "zh-TW",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "{CURRENCY}" },
+      "provider": { "@type": "Organization", "@id": "https://example.com/#organization", "name": "{BRAND_NAME}", "url": "https://example.com/" },
+      "mainEntityOfPage": "https://example.com/{tool}/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://example.com/{tool}/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "{來自 GSC 真實查詢的問題}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{第一句直接回答}" }
+        }
+      ]
+    }
+  ],
+  "entityPage": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{詞條名}是什麼？{副標}",
+      "description": "{meta description}",
+      "image": "https://example.com/images/{slug}.webp",
+      "author": { "@type": "Organization", "@id": "https://example.com/#organization", "name": "{BRAND_NAME}", "url": "https://example.com/" },
+      "publisher": { "@type": "Organization", "@id": "https://example.com/#organization", "name": "{BRAND_NAME}", "url": "https://example.com/" },
+      "mainEntityOfPage": "https://example.com/glossary/{slug}",
+      "datePublished": "{YYYY-MM-DD}",
+      "dateModified": "{只有內容真的改過才更新}",
+      "about": {
+        "@type": "DefinedTerm",
+        "@id": "https://example.com/glossary/{slug}#defined-term",
+        "name": "{詞條名}",
+        "inDefinedTermSet": { "@type": "DefinedTermSet", "name": "{詞彙表名}", "url": "https://example.com/glossary/" }
+      },
+      "keywords": ["{詞條名}", "{同義詞}", "{所屬分類}"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "@id": "https://example.com/glossary/{slug}#defined-term",
+      "name": "{詞條名}",
+      "description": "{答案膠囊的定義句：45–75 字、單一句、以句號結尾}",
+      "url": "https://example.com/glossary/{slug}",
+      "image": "https://example.com/images/{slug}.webp",
+      "inDefinedTermSet": { "@type": "DefinedTermSet", "name": "{詞彙表名}", "url": "https://example.com/glossary/" },
+      "termCode": "{slug}"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://example.com/glossary/{slug}#faq",
+      "mainEntityOfPage": "https://example.com/glossary/{slug}",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://example.com/glossary/{slug}#capsule-faq",
+          "name": "{詞條名}代表什麼？",
+          "acceptedAnswer": { "@type": "Answer", "text": "{定義句}{各維度：維度一：…。維度二：…。}{提醒語}" }
+        },
+        {
+          "@type": "Question",
+          "name": "{正文 FAQ 問題二}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{答案二}" }
+        },
+        {
+          "@type": "Question",
+          "name": "{正文 FAQ 問題三}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{答案三}" }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://example.com/" },
+        { "@type": "ListItem", "position": 2, "name": "{詞彙表名}", "item": "https://example.com/glossary/" },
+        { "@type": "ListItem", "position": 3, "name": "{詞條名}", "item": "https://example.com/glossary/{slug}" }
+      ]
+    }
+  ],
+  "articlePage": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{文章標題}",
+      "description": "{meta description}",
+      "url": "https://example.com/blog/{slug}",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://example.com/blog/{slug}" },
+      "datePublished": "{YYYY-MM-DD}",
+      "dateModified": "{只有內容真的改過才更新}",
+      "inLanguage": "zh-TW",
+      "image": { "@type": "ImageObject", "url": "https://example.com/blog/images/{slug}.webp", "width": 1280, "height": 720 },
+      "author": { "@type": "Organization", "@id": "https://example.com/#organization", "name": "{BRAND_NAME}", "url": "https://example.com/" },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://example.com/#organization",
+        "name": "{BRAND_NAME}",
+        "url": "https://example.com/",
+        "logo": { "@type": "ImageObject", "url": "https://example.com/logo.png" }
+      },
+      "articleSection": "{分類}",
+      "keywords": ["{主關鍵字}", "{相關詞}", "{相關詞}"],
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".tldr", "h1"] },
+      "citation": [
+        { "@type": "CreativeWork", "name": "{和本文主題直接相關的來源}", "url": "https://{來源網址}" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "{正文 FAQ 問題}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{答案}" }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://example.com/" },
+        { "@type": "ListItem", "position": 2, "name": "{部落格名}", "item": "https://example.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "{文章標題}", "item": "https://example.com/blog/{slug}" }
+      ]
+    }
+  ],
+  "ecommerceProductPage": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "{商品名}",
+      "description": "{答案膠囊式定義句：適合誰、核心差異、不適合誰}",
+      "sku": "{SKU}",
+      "brand": { "@type": "Brand", "name": "{品牌}" },
+      "image": ["https://example.com/images/{sku}.webp"],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://example.com/products/{slug}",
+        "price": "{PRICE}",
+        "priceCurrency": "{CURRENCY}",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://example.com/" },
+        { "@type": "ListItem", "position": 2, "name": "{分類}", "item": "https://example.com/{category}/" },
+        { "@type": "ListItem", "position": 3, "name": "{商品名}", "item": "https://example.com/products/{slug}" }
+      ]
+    }
+  ]
+}
